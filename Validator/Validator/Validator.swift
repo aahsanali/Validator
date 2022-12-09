@@ -19,6 +19,6 @@ public struct Validator{
         
     }
     public static func letsGO(){
-        print("in FRAMEWORK ")
+        print("in FRAMEWORK NEW ")
     }
 }
