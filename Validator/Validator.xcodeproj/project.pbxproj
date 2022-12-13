@@ -11,6 +11,9 @@
 		03BC4385294748ED001B9121 /* Validator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BC437A294748ED001B9121 /* Validator.framework */; };
 		03BC438A294748ED001B9121 /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC4389294748ED001B9121 /* ValidatorTests.swift */; };
 		03BC438B294748ED001B9121 /* Validator.h in Headers */ = {isa = PBXBuildFile; fileRef = 03BC437D294748ED001B9121 /* Validator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03BC439529474EC6001B9121 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC439429474EC6001B9121 /* Validator.swift */; };
+		4DBF1D3EDA51FCEE9D0DAEA6 /* Pods_Validator_ValidatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E07D3DCC971EC472D7F5B6 /* Pods_Validator_ValidatorTests.framework */; };
+		67397200E82B9D9D757F992C /* Pods_Validator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED234069B2920B7EA71B35B3 /* Pods_Validator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,14 @@
 		03BC437E294748ED001B9121 /* Validator.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Validator.docc; sourceTree = "<group>"; };
 		03BC4384294748ED001B9121 /* ValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03BC4389294748ED001B9121 /* ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorTests.swift; sourceTree = "<group>"; };
+		03BC439429474EC6001B9121 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		03BC439729474F2E001B9121 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		23B4FBC5049F39D731F918B9 /* Pods-Validator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Validator.release.xcconfig"; path = "Target Support Files/Pods-Validator/Pods-Validator.release.xcconfig"; sourceTree = "<group>"; };
+		34E07D3DCC971EC472D7F5B6 /* Pods_Validator_ValidatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Validator_ValidatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B7602BE9D8FC433EF1BABB5 /* Pods-Validator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Validator.debug.xcconfig"; path = "Target Support Files/Pods-Validator/Pods-Validator.debug.xcconfig"; sourceTree = "<group>"; };
+		974B7E8DEA316D981BB2A674 /* Pods-Validator-ValidatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Validator-ValidatorTests.debug.xcconfig"; path = "Target Support Files/Pods-Validator-ValidatorTests/Pods-Validator-ValidatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C34B4C4080ACFC0E48947667 /* Pods-Validator-ValidatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Validator-ValidatorTests.release.xcconfig"; path = "Target Support Files/Pods-Validator-ValidatorTests/Pods-Validator-ValidatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED234069B2920B7EA71B35B3 /* Pods_Validator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Validator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67397200E82B9D9D757F992C /* Pods_Validator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03BC4385294748ED001B9121 /* Validator.framework in Frameworks */,
+				4DBF1D3EDA51FCEE9D0DAEA6 /* Pods_Validator_ValidatorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +69,8 @@
 				03BC437C294748ED001B9121 /* Validator */,
 				03BC4388294748ED001B9121 /* ValidatorTests */,
 				03BC437B294748ED001B9121 /* Products */,
+				03BC439629474F2E001B9121 /* Frameworks */,
+				E94C6A0D304DE0CC12707134 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				03BC437D294748ED001B9121 /* Validator.h */,
+				03BC439429474EC6001B9121 /* Validator.swift */,
 				03BC437E294748ED001B9121 /* Validator.docc */,
 			);
 			path = Validator;
@@ -83,6 +99,28 @@
 				03BC4389294748ED001B9121 /* ValidatorTests.swift */,
 			);
 			path = ValidatorTests;
+			sourceTree = "<group>";
+		};
+		03BC439629474F2E001B9121 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03BC439729474F2E001B9121 /* XCTest.framework */,
+				ED234069B2920B7EA71B35B3 /* Pods_Validator.framework */,
+				34E07D3DCC971EC472D7F5B6 /* Pods_Validator_ValidatorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E94C6A0D304DE0CC12707134 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B7602BE9D8FC433EF1BABB5 /* Pods-Validator.debug.xcconfig */,
+				23B4FBC5049F39D731F918B9 /* Pods-Validator.release.xcconfig */,
+				974B7E8DEA316D981BB2A674 /* Pods-Validator-ValidatorTests.debug.xcconfig */,
+				C34B4C4080ACFC0E48947667 /* Pods-Validator-ValidatorTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +141,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03BC438E294748ED001B9121 /* Build configuration list for PBXNativeTarget "Validator" */;
 			buildPhases = (
+				9C4A4BE264FC2A5CB6B09400 /* [CP] Check Pods Manifest.lock */,
 				03BC4375294748ED001B9121 /* Headers */,
 				03BC4376294748ED001B9121 /* Sources */,
 				03BC4377294748ED001B9121 /* Frameworks */,
@@ -121,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03BC4391294748ED001B9121 /* Build configuration list for PBXNativeTarget "ValidatorTests" */;
 			buildPhases = (
+				12524ED25BDE79174B3ED1CC /* [CP] Check Pods Manifest.lock */,
 				03BC4380294748ED001B9121 /* Sources */,
 				03BC4381294748ED001B9121 /* Frameworks */,
 				03BC4382294748ED001B9121 /* Resources */,
+				8B9C1FA5770A68BBC011FA5D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,11 +230,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12524ED25BDE79174B3ED1CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Validator-ValidatorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B9C1FA5770A68BBC011FA5D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Validator-ValidatorTests/Pods-Validator-ValidatorTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Validator-ValidatorTests/Pods-Validator-ValidatorTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Validator-ValidatorTests/Pods-Validator-ValidatorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C4A4BE264FC2A5CB6B09400 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Validator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		03BC4376294748ED001B9121 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03BC439529474EC6001B9121 /* Validator.swift in Sources */,
 				03BC437F294748ED001B9121 /* Validator.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +445,7 @@
 		};
 		03BC438F294748ED001B9121 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B7602BE9D8FC433EF1BABB5 /* Pods-Validator.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -367,6 +474,7 @@
 		};
 		03BC4390294748ED001B9121 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23B4FBC5049F39D731F918B9 /* Pods-Validator.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -395,7 +503,9 @@
 		};
 		03BC4392294748ED001B9121 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 974B7E8DEA316D981BB2A674 /* Pods-Validator-ValidatorTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3CMZ83JQ6G;
@@ -411,7 +521,9 @@
 		};
 		03BC4393294748ED001B9121 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C34B4C4080ACFC0E48947667 /* Pods-Validator-ValidatorTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3CMZ83JQ6G;
