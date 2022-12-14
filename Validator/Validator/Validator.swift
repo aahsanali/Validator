@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Alamofire
 
 
 public struct Validator{
@@ -22,9 +21,9 @@ public struct Validator{
     }
     public static func letsGO(){
         print("in FRAMEWORK NEW ")
-        Validator().btnLoginPressed()
+//        Validator().btnLoginPressed()
     }
-    
+    /*
     func btnLoginPressed() {
         let deviceName = "iPhone (iPhone13,2)"
         let deviceUUID = UIDevice.current.identifierForVendor?.uuidString ?? ""
@@ -85,4 +84,5 @@ public struct Validator{
             }
         }
     }
+     */
 }
