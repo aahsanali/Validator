@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03728B492949E210004962E1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03728B482949E210004962E1 /* NetworkManager.swift */; };
+		03728B4B2949E224004962E1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03728B4A2949E224004962E1 /* LoginViewController.swift */; };
 		03BC437F294748ED001B9121 /* Validator.docc in Sources */ = {isa = PBXBuildFile; fileRef = 03BC437E294748ED001B9121 /* Validator.docc */; };
 		03BC4385294748ED001B9121 /* Validator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BC437A294748ED001B9121 /* Validator.framework */; };
 		03BC438A294748ED001B9121 /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC4389294748ED001B9121 /* ValidatorTests.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03728B482949E210004962E1 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		03728B4A2949E224004962E1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		03BC437A294748ED001B9121 /* Validator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Validator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03BC437D294748ED001B9121 /* Validator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Validator.h; sourceTree = "<group>"; };
 		03BC437E294748ED001B9121 /* Validator.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Validator.docc; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 			children = (
 				03BC437D294748ED001B9121 /* Validator.h */,
 				03BC439429474EC6001B9121 /* Validator.swift */,
+				03728B4A2949E224004962E1 /* LoginViewController.swift */,
+				03728B482949E210004962E1 /* NetworkManager.swift */,
 				03BC437E294748ED001B9121 /* Validator.docc */,
 			);
 			path = Validator;
@@ -119,7 +125,6 @@
 				974B7E8DEA316D981BB2A674 /* Pods-Validator-ValidatorTests.debug.xcconfig */,
 				C34B4C4080ACFC0E48947667 /* Pods-Validator-ValidatorTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -299,6 +304,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03728B4B2949E224004962E1 /* LoginViewController.swift in Sources */,
+				03728B492949E210004962E1 /* NetworkManager.swift in Sources */,
 				03BC439529474EC6001B9121 /* Validator.swift in Sources */,
 				03BC437F294748ED001B9121 /* Validator.docc in Sources */,
 			);

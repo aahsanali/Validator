@@ -1,48 +1,62 @@
 //
-//  Validator.swift
-//  Validator
+//  LoginViewController.swift
+//  4ARTLogin
 //
-//  Created by Naveed A. on 12/9/22.
+//  Created by Coeus on 18/11/2022.
 //
 
-import Foundation
-import Alamofire
+import UIKit
 
+public class LoginViewController: UIViewController {
 
-public struct Validator{
+    @IBOutlet weak var txtPassword: UITextField!
+   
+    @IBOutlet weak var txtEmail: UITextField!
     
-    public static func validateEmail(_ email:String) -> Bool{
-        
-        let validationRegex = "^[\\p{L}0-9!#$%&'*+\\/=?^_`{|}~-][\\p{L}0-9.!#$%&'*+\\/=?^_`{|}~-]{0,63}@[\\p{L}0-9-]+(?:\\.[\\p{L}0-9-]{2,7})*$"  // 1
+    var activityView: UIActivityIndicatorView?
 
-          let validationPredicate = NSPredicate(format: "SELF MATCHES %@", validationRegex)  // 2
-
-          return validationPredicate.evaluate(with: email)  // 3
-        
-    }
-    public static func letsGO(){
-        print("in FRAMEWORK NEW ")
-        Validator().btnLoginPressed()
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        // Do any additional setup after loading the view.
     }
     
-    func btnLoginPressed() {
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func showActivityIndicator() {
+        activityView = UIActivityIndicatorView(style: .large)
+        activityView?.center = self.view.center
+        self.view.addSubview(activityView!)
+        activityView?.startAnimating()
+    }
+
+    func hideActivityIndicator(){
+        if (activityView != nil){
+            activityView?.stopAnimating()
+        }
+    }
+    
+    @IBAction func btnLoginPressed(_ sender: Any) {
         let deviceName = "iPhone (iPhone13,2)"
         let deviceUUID = UIDevice.current.identifierForVendor?.uuidString ?? ""
 
-        let loginInfo = ["email" : "naveed.ahsan@coeus-solutions.de",
-                         "plainPassword" :"Coeus123$",
+        let loginInfo = ["email" : txtEmail.text ?? "",
+                         "plainPassword" : txtPassword.text ?? "",
                         "os" : "iOS",
                         "app" : "4ART",
                         "token" : "5e60dcfada6c64d2ad3e40e035780da95a479d16346a87d1a4bc5001146330e7",
                         "device_uuid" : deviceUUID,
                          "device_name" : deviceName] as [String : String]
         DispatchQueue.main.async {
-//            self.showActivityIndicator()
+            self.showActivityIndicator()
         }
         NetworkManager.shared.sendPostRequest("https://api-pre-live.4art-technologies.com/api/v1/user-login", parameters: loginInfo) { data, response, error in
             if error != nil {
                 DispatchQueue.main.async {
-//                    self.hideActivityIndicator()
+                    self.hideActivityIndicator()
                     let alert = UIAlertController(title: "Alert", message: "Unable to login", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                         switch action.style{
@@ -59,11 +73,12 @@ public struct Validator{
                             print("unknown")
                         }
                     }))
+                    self.present(alert, animated: true, completion: nil)
                 }
             }
             else{
                 DispatchQueue.main.async {
-//                    self.hideActivityIndicator()
+                    self.hideActivityIndicator()
                     let alert = UIAlertController(title: "Alert", message: "Successfuly login", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                         switch action.style{
@@ -80,9 +95,22 @@ public struct Validator{
                             print("unknown")
                         }
                     }))
-
+                    self.present(alert, animated: true, completion: nil)
                 }
             }
         }
     }
+    
+    
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
+
