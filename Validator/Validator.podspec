@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "Validator"
-  spec.version      = "0.0.6"
+  spec.version      = "0.0.5"
   spec.summary      = "A short description of Validator."
   
   spec.homepage     = "www.google.com"
@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
   
 
 #  spec.source       = { :git => "https://github.com/aahsanali/Validator.git", :tag => spec.version.to_s } # github path
-  spec.source       = { :git => "../../Validator", :tag => "0.0.4" } # Local git path
+  spec.source       = { :git => "../../Validator", :tag => "0.0.5" } # Local git path
   spec.source_files  = "Validator/**/*.{swift}"
   spec.dependency 'Alamofire'
   
