@@ -13,9 +13,9 @@ Pod::Spec.new do |spec|
   
 
 #  spec.source       = { :git => "https://github.com/aahsanali/Validator.git", :tag => spec.version.to_s } # github path
-  spec.source       = { :git => "../../Validator", :tag => "0.0.4" } # Local git path
+  spec.source       = { :git => "../../Validator", :tag => "0.0.11" } # Local git path
   spec.source_files  = "Validator/**/*.{swift}"
-  spec.dependency 'Alamofire'
+#  spec.dependency 'Alamofire'
   
 #  spec.frameworks = 'XCTest'
   
