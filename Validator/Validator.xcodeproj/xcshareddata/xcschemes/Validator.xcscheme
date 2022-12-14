@@ -74,5 +74,14 @@
    <ArchiveAction
       buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;# Type a script or drag a script file from your workspace to insert its path.&#10;UNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal&#10;mkdir -p &quot;${UNIVERSAL_OUTPUTFOLDER}&quot;&#10;cp -a &quot;${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework&quot; &quot;${UNIVERSAL_OUTPUTFOLDER}/&quot;&#10;SIMULATOR_SWIFT_MODULES_DIR=&quot;${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.&quot;&#10;if [ -d &quot;${SIMULATOR_SWIFT_MODULES_DIR}&quot; ]; then&#10;cp -R &quot;${SIMULATOR_SWIFT_MODULES_DIR}&quot; &quot;${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule&quot;&#10;fi&#10;lipo -create -output &quot;${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}&quot; &quot;${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}&quot; &quot;${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}&quot;&#10;cp -R &quot;${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework&quot; &quot;${PROJECT_DIR}&quot;&#10;open &quot;${PROJECT_DIR}&quot;&#10;">
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
    </ArchiveAction>
 </Scheme>
