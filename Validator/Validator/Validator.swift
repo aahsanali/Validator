@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import UIKit
 
 
 public struct Validator{
@@ -41,46 +42,11 @@ public struct Validator{
         }
         NetworkManager.shared.sendPostRequest("https://api-pre-live.4art-technologies.com/api/v1/user-login", parameters: loginInfo) { data, response, error in
             if error != nil {
-                DispatchQueue.main.async {
-//                    self.hideActivityIndicator()
-                    let alert = UIAlertController(title: "Alert", message: "Unable to login", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                        switch action.style{
-                            case .default:
-                            print("default")
-                            
-                            case .cancel:
-                            print("cancel")
-                            
-                            case .destructive:
-                            print("destructive")
-                            
-                        @unknown default:
-                            print("unknown")
-                        }
-                    }))
-                }
+                DispatchQueue.main.async {}
             }
             else{
                 DispatchQueue.main.async {
-//                    self.hideActivityIndicator()
-                    let alert = UIAlertController(title: "Alert", message: "Successfuly login", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                        switch action.style{
-                            case .default:
-                            print("default")
-                            
-                            case .cancel:
-                            print("cancel")
-                            
-                            case .destructive:
-                            print("destructive")
-                            
-                        @unknown default:
-                            print("unknown")
-                        }
-                    }))
-
+                    
                 }
             }
         }
